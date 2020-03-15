@@ -1,1 +1,15 @@
+def attachment(f1, f2):
+    if len(f1) <= len(f2):
+        a = {}
+        for c in range(len(f1)):
+            if f1[c] not in a:
+                a[f1[c]] = f2[c]
+            if a[f1[c]] != f2[c]:
+                return False
+        return True
+    return False
 
+
+print(attachment("abc", "bcd"))
+print(attachment("foo", "bar"))
+print(attachment("bar", "foo"))
